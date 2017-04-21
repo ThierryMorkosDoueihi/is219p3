@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app class="ng-scope">
+<html ng-app="IS219Gallery" class="ng-scope">
 <head>
 	<title>IS219 Gallery (Project 3)</title>
 
@@ -16,16 +16,16 @@
 	<!-- DO NOT CHANGE ANYTHING ABOVE THIS LINE-->
 
 	<!-- Angular (ADD HERE) -->
-	<script src="./HomeController.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 	
 </head>
 
-  <body>
+  <body ng-controller="HomeController">
 	  
     <div class="header">
 	    
       <div class="container">
-        <h1 id="app_title">%title%</h1>
+        <h1 id="app_title">{{title}}</h1>
       </div>
       
     </div>
@@ -36,20 +36,22 @@
 
         <div class="col-md-6"> 
             <div class="thumbnail">
+			<div ng-repeat="movie in movies">
 
-					<img class="poster" />
-					<div class="imageInfo">%posterindex%</div>
+					<img class="poster" src="{{movie.poster[0]}}"/>
+					<div class="imageInfo">{{movie.posterindex}}</div>
 					
-					<p class="title">%title% (%country%)</p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> %iscore% </p>
-					<p class="runtime">Runtime: %runtime%</p> 
-					<p class="released">Released: %released% | Rated: %rating%</p>
-					<p class="websites">Websites: <a>%imdb%</a> | <a>%website%</a></p>
+					<p class="title">{{movie.title}} ({{movie.country}})</p> 
+					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movie.iscore}} </p>
+					<p class="runtime">Runtime: {{movie.runtime}}</p> 
+					<p class="released">Released: {{movie.released}} | Rated: {{movie.rating}}</p>
+					<p class="websites">Websites: <a href={{movie.imdb}}>IMDB</a> | <a href={{movie.website}}>Official</a></p>
 					
 		            <div class="social">
 		              <p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> %like%</p>
 		              <p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i> %dislike%</p>
 		            </div>
+			</div>
             </div> 
         </div>
 
@@ -59,7 +61,7 @@
     <div class="footer">
       <div class="container">
 		<a id="github" class="btn btn-lg btn-warning">
-			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> %owner% %github%
+			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i><a href={{github}}> {{owner}}</a>
   		</a>
       </div>
     </div>
