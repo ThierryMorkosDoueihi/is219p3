@@ -88,8 +88,49 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
+	},
+	{ 
+      title:	'Warrior', 
+      iscore:	8.2,
+      rating:	'PG-13',
+      runtime:	140,
+      released:	new Date('2011', '11', '09'),
+      country:	'USA',
+      posters:	['img/warrior1.jpg','img/warrior2.jpg','img/warrior3.jpg'],
+      imdb:		'http://www.imdb.com/title/tt1291584/',
+      website:	'https://en.wikipedia.org/wiki/Warrior_(2011_film)',
+      likes:	1522,
+      dislikes:	316,
+      posterindex: 0
+	},
+	{ 
+      title:	'Slumdog Millionaire', 
+      iscore:	8.0,
+      rating:	'R',
+      runtime:	120,
+      released:	new Date('2008', '12', '25'),
+      country:	'USA',
+      posters:	['img/slum1.jpg','img/slum2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt1010048/',
+      website:	'https://en.wikipedia.org/wiki/Slumdog_Millionaire',
+      likes:	1032,
+      dislikes:	102,
+      posterindex: 0
+	},
+	{ 
+      title:	'Les Intouchables', 
+      iscore:	8.6,
+      rating:	'R',
+      runtime:	112,
+      released:	new Date('2011', '11', '02'),
+      country:	'France',
+      posters:	['img/int1.jpg','img/int2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt1675434/',
+      website:	'https://en.wikipedia.org/wiki/The_Intouchables',
+      likes:	1201,
+      dislikes:	93,
+      posterindex: 0
 	}
-	
 	
   ];
 	
